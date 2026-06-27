@@ -1,0 +1,38 @@
+<%- include('../partials/head') %>
+<body style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; margin: 0; padding: 24px; background-color: #fafafa; color: #1a1a1a;">
+    <%- include('../partials/nav') %>
+    <main style="max-width: 800px; margin: 0 auto;">
+        <h1 style="color: #ff5a5f; font-size: 32px; margin-top: 0; margin-bottom: 8px;">Welcome to airbnb</h1>
+        <h3 style="color: #484848; font-size: 18px; font-weight: 400; margin-bottom: 24px;">hey Admin ! Here Are you Home</h3>
+        <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px;">
+            <% registeredHomes.forEach( (home)=> { %>
+                <li style="background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #e0e0e0; display: flex; flex-direction: column; transition: transform 0.2s ease;">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="Beautiful house" style="width: 100%; height: 180px; object-fit: cover;" />
+                    <div style="padding: 16px; display: flex; flex-direction: column; gap: 6px; position: relative;">
+                        <h4 style="margin: 0; font-size: 17px; font-weight: 600; color: #222222;"><%= home.houseName %></h4>
+                        <p style="margin: 0; font-size: 13px; color: #717171; display: flex; align-items: center; gap: 4px;">
+                            📍 <%= home.location %>
+                        </p>
+                        <div style="margin-top: 10px; border-top: 1px solid #f0f0f0; padding-top: 10px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                                <span style="font-size: 13px; color: #717171; display: flex; align-items: center; gap: 4px;">
+                                    👥 <%= home.occupancy %> Guests
+                                </span>
+                                <span style="font-size: 14px; font-weight: 600; color: #222222; text-align: right;">
+                                    ₹<%= home.price %> <span style="font-weight: 400; font-size: 11px; color: #717171;">/ night</span>
+                                </span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button type="submit" style="flex: 1; background-color: #008489; color: white; border: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background-color 0.2s ease, transform 0.1s ease;" onmouseover="this.style.backgroundColor='#006c70'" onmouseout="this.style.backgroundColor='#008489'" onmousedown="this.style.transform='scale(0.95)'" onmouseup="this.style.transform='scale(1)'">Edit</button>
+                                <button type="submit" style="background-color: #fff5f5; color: #c13c24; border: 1px solid #ffcdd2; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background-color 0.2s ease, transform 0.1s ease;" onmouseover="this.style.backgroundColor='#ffebee'; this.style.borderColor='#c13c24'" onmouseout="this.style.backgroundColor='#fff5f5'; this.style.borderColor='#ffcdd2'" onmousedown="this.style.transform='scale(0.95)'" onmouseup="this.style.transform='scale(1)'">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+    </main>
+        
+    
+</body>
+</html>
