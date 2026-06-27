@@ -1,0 +1,25 @@
+<header style="max-width: 800px; margin: 0 auto 32px auto; padding-bottom: 16px; border-bottom: 1px solid #eaeaea;">
+        <nav style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 700; font-size: 20px; letter-spacing: -0.5px; color: #1a1a1a;">airbnb</span>
+            <ul style="display: flex; gap: 8px; list-style: none; padding: 0; margin: 0;">
+                <li>
+                    <a href="/" style="text-decoration: none; color: <%= (typeof currentPage !== 'undefined' && currentPage === 'index') ? '#1a1a1a' : '#666' %>; background-color: <%= (typeof currentPage !== 'undefined' && currentPage === 'index') ? '#f0f0f0' : 'transparent' %>; font-weight: 500; font-size: 14px; padding: 8px 16px; border-radius: 6px;">airbnb</a>
+                </li>
+                <li>
+                    <a href="/home" style="text-decoration: none; color: <%= (typeof currentPage !== 'undefined' && currentPage === 'home') ? '#1a1a1a' : '#666' %>; background-color: <%= (typeof currentPage !== 'undefined' && currentPage === 'home') ? '#f0f0f0' : 'transparent' %>; font-weight: 500; font-size: 14px; padding: 8px 16px; border-radius: 6px;">Home</a>
+                </li>
+                <li>
+                    <a href="/favourites" style="text-decoration: none; color: <%= (typeof currentPage !== 'undefined' && currentPage === 'Favourites') ? '#1a1a1a' : '#666' %>; background-color: <%= (typeof currentPage !== 'undefined' && currentPage === 'Favourites') ? '#f0f0f0' : 'transparent' %>; font-weight: 500; font-size: 14px; padding: 8px 16px; border-radius: 6px;">favourites</a>
+                </li>
+                <li>
+                    <a href="/bookings" style="text-decoration: none; color: <%= (typeof currentPage !== 'undefined' && currentPage === 'Bookings') ? '#1a1a1a' : '#666' %>; background-color: <%= (typeof currentPage !== 'undefined' && currentPage === 'Bookings') ? '#f0f0f0' : 'transparent' %>; font-weight: 500; font-size: 14px; padding: 8px 16px; border-radius: 6px;">Bookings</a>
+                </li>
+                <li>
+                    <a href="/admin/add-home" style="text-decoration: none; color: <%= (typeof currentPage !== 'undefined' && currentPage === 'add-home') ? '#1a1a1a' : '#666' %>; background-color: <%= (typeof currentPage !== 'undefined' && currentPage === 'add-home') ? '#f0f0f0' : 'transparent' %>; font-weight: 500; font-size: 14px; padding: 8px 16px; border-radius: 6px;">Add Home</a>
+                </li>
+                <li>
+                    <a href="/admin/admin-home-list" style="text-decoration: none; color: <%= (typeof currentPage !== 'undefined' && currentPage === 'admin-home') ? '#1a1a1a' : '#666' %>; background-color: <%= (typeof currentPage !== 'undefined' && currentPage === 'admin-home') ? '#f0f0f0' : 'transparent' %>; font-weight: 500; font-size: 14px; padding: 8px 16px; border-radius: 6px;">Admin Home List</a>
+                </li>
+            </ul>
+        </nav>
+    </header>

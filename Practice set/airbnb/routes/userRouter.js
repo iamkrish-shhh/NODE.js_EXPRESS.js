@@ -1,16 +1,14 @@
-// core module
-const path = require('path')
-
 // external module
 const express = require('express')
 const userRouter = express.Router()
 
 // local module
-const rootDir = require("../utils/pathUtil")
+const userController = require('../controllers/userController')
 
 
-userRouter.get('/',(req,res,next)=> {
-    res.sendFile(path.join(rootDir,"views","home.html"))
-})
+userRouter.get('/',userController.getIndex)
+userRouter.get('/home',userController.getHome)
+userRouter.get('/Bookings',userController.getBookings)
+userRouter.get('/Favourites',userController.getFavouriteList)
 
 module.exports = userRouter

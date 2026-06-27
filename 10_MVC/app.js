@@ -3,7 +3,7 @@ const express = require('express')
 
 //local module
 const userRouter = require("./routes/userRouter")
-const {adminRouter} = require("./routes/adminRouter")
+const {hostRouter} = require("./routes/hostRouter")
 const errorController = require('./controllers/error')
 
 const app = express()
@@ -15,7 +15,7 @@ app.set('views','views')
 app.use(express.urlencoded( extended = true))
 
 app.use(userRouter)
-app.use("/admin",adminRouter)
+app.use("/host",hostRouter)
 
 app.use(errorController.get404)
 
